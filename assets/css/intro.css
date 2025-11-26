@@ -1,11 +1,10 @@
-/* INTRO SCREEN ------------------------------------------ */
 #intro {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     overflow: hidden;
     z-index: 99999;
-    background: #000; /* 등장 순간 깜빡임 방지 */
+    background: #000;
 }
 
 #intro .intro-bg {
@@ -64,7 +63,7 @@
     height: 35px;
     padding: 5px;
     border-radius: 10px;
-    background-color: #146161;
+    background-color: #1e8888;
     display: flex;
     justify-content: center;
     align-items: center;

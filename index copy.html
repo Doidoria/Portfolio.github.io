@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <meta name="author" content="윤태현">
-    <meta name="description" content="윤태현의 포트폴리오 사이트">
+    <meta name="author" content="김강산">
+    <meta name="description" content="김강산의 포트폴리오 사이트">
     <meta name="keywords" content="웹퍼블리셔, 웹접근성, 반응형사이트, HTML5, WEB">
     <title>PORTFOLIO</title>
     
     <!-- style -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/intro.css">
     
     <!-- web font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,900&display=swap" rel="stylesheet">
@@ -20,12 +19,10 @@
     <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
     
+    
     <!-- Icon -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
-
-    <!--CDNJS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
     
     <!-- HTLM5shiv ie6~8 -->
     <!--[if lt IE 9]> 
@@ -35,33 +32,22 @@
         </script>
    <![endif]-->
    
+   
 </head>
 <body>
   
-    <!-- <div class="progress" id="progress"> 
+
+    <div class="progress" id="progress"> 
 		<span class="progress-bar"></span>
 		<span class="progress-text"></span> 
         <div class="loader">
             <div class="loader_box"></div>
             <div class="loader_box"></div>
         </div> 
-	</div> -->
-
-    <!-- 인트로 (수정) -->
-    <!-- <div id="intro">
-        <div class="intro-bg"></div>
-        <div class="intro-profile">
-            <img src="assets/img/icon_portfolio-profile.png" alt="profile">
-        </div>
-        <button class="intro-btn">
-            <span class="intro-text">포트폴리오 보러가기</span>
-            <div class="intro-arrow-box">
-                <img src='./assets/img/icon_arrow.png' class="intro-arrow"></img>
-            </div>
-        </button>
-    </div> -->
+	</div>
 
     <!-- //progress -->
+   
     <div id="dot">
         <ul>
             <li class="active"><a href="#"><em class="active">01</em><span>HOME</span></a></li>
@@ -72,6 +58,7 @@
         </ul>
     </div>
     <!-- //dot -->
+    
     	<div class="menu-wrapper">
 		<button class="menu-button wrap">
 			<span class="menu-button-item line">
@@ -100,6 +87,7 @@
 		</button>
 	</div>
 	<!-- //menu-wrapper -->
+   
    
    <div class="menu-inner">
 		<div class="box-wrap">
@@ -178,22 +166,25 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.987,37.261c5.662-0.872,10.45,0.53,13.596,2.822
                   c-6.125,0.375-9.356,1.404-14.771-2.639C19.145,37.657,19.594,37.322,19.987,37.261z"/>
             </svg>
-            <span class="name">DOIDORIA</span>
+            <span class="name">KANGSAN</span>
             <span class="sname">PORTFOLIO</span>
         </h1>
     </nav>
     <!-- //nav -->
     
+
     <section id="contents">
         <section id="section1">
             <div id="bg">
                 <div id="stars"></div>
-                <div id="aurora"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
             </div>
             <div class="sec1">
                 <div class="text">
-                    <h2 class="glitch_pro" data-text="DO,PORTFOLIO"><span>DO,PORTFOLIO</span></h2><br>
-                    <a href="#section2" class="skew"><span>PROFILE MORE</span></a>
+                    <span class="sec1_desc">Front End Developer / Web Publisher / Web Design</span>
+                    <h2 class="glitch">HI,T<span class="style1">HERE</span></h2>
+                    <a href="#section2" class="skew"><span>I NEED YOU TO HIRE ME</span></a>
                 </div>
             </div>
         </section>
@@ -206,15 +197,23 @@
                     <div class="sec2">
                         <p class="strapline">PROFILE</p>
                         <h3>
-                            <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
+                            <span>I</span><span>N</span><span>T</span><span>R</span><span>O</span><span>D</span><span>U</span><span>C</span><span>E</span>
                         </h3>
-                        <div class="about_center">
-                            <div class="about_photo">
-                                <img src="assets/img/icon_portfolio-profile.png" alt="profile">
-                            </div>
-                            <h2 class="about_name">Yoon Tae Hyun</h2>
-                            <p class="about_role">Pull-Stack Developer</p>
+                        <div class="photo">
+                            <img src="assets/img/photo.jpg" alt="photo">
+                            <p>Kim kangsan</p>
                         </div>
+                        <div class="skill-wrap">
+							<div class="skill">
+								<ul class="clearfix about">
+									<li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">90</strong><span class="f1">PHOTOSHOP</span></a></li>
+									<li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">85</strong><span class="f1">ILLUSTRATOR</span></a></li>
+									<li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">95</strong><span class="f1">HTML</span></a></li>
+									<li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">95</strong><span class="f1">CSS</span></a></li>
+									<li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">85</strong><span class="f1">JAVASCRIPT</span></a></li>
+								</ul>
+							</div>
+						</div>
                     </div>
                 </div>
             </div>
@@ -227,44 +226,84 @@
                 <div class="row">
                     <div class="sec3">
                         <p class="strapline">MY WORK</p>
-                        <h3 class="sec3-title">CODING</h3>
-                        <div class="project">
-                            <div class="project-img">
-                                <img src="assets/img/cont1.png" alt="">
-                            </div>
-                            <div class="project-text">
-                                <p class="p-num">PROJECT 01</p>
-                                <h4 class="p-title">STANDARD</h4>
-                                <p class="p-desc">Web Standard Site Coding</p>
-                                <a href="http://kangsane.dothome.co.kr/web/" class="p-link" target="_blank">
-                                    VIEW SITE →
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project reverse">
-                            <div class="project-img">
-                                <img src="assets/img/cont2.png" alt="">
-                            </div>
-                            <div class="project-text">
-                                <p class="p-num">PROJECT 02</p>
-                                <h4 class="p-title">RESPONSIVE</h4>
-                                <p class="p-desc">Web Responsive Site Coding</p>
-                                <a href="http://kangsane.dothome.co.kr/responsive/html5/index.html" class="p-link" target="_blank">
-                                    VIEW SITE →
-                                </a>
+                        <h3>
+                            <span>C</span><span>O</span><span>D</span><span>I</span><span>N</span><span>G</span>
+                        </h3>
+                        <div class="cont_left">
+                            <div class="s3_img"><img src="assets/img/cont1.png" alt="웹표준사이트"></div>
+                            <div class="revealer"></div>
+                            <div class="s3_text">
+                                <p class="s3_tit">PROJECT 01</p>
+                                <h4 class="h4_tit">STANDARD</h4>
+                                <p class="s3_desc">Web Standard Site Coding</p>
+                                <span class="mSite">kangsane.dothome.co.kr</span>
+                                <a href="http://kangsane.dothome.co.kr/web/" target="_blank" class="skew"><span>VIEW SITE</span></a>
                             </div>
                         </div>
-                        <div class="project">
-                            <div class="project-img">
-                                <img src="assets/img/cont3.png" alt="">
+                        <div class="cont_right">
+                            <div class="s3_img"><img src="assets/img/cont2.png" alt="반응형사이트"></div>
+                            <div class="revealer"></div>
+                            <div class="s3_text">
+                                <p class="s3_tit">PROJECT 02</p>
+                                <h4 class="h4_tit">RESPONSIVE</h4>
+                                <p class="s3_desc">Web Responsive Site Coding</p>
+                                <span class="mSite">kangsane.dothome.co.kr</span>
+                                <a href="http://kangsane.dothome.co.kr/responsive/html5/index.html" target="_blank" class="skew"><span>VIEW SITE</span></a>
                             </div>
-                            <div class="project-text">
-                                <p class="p-num">PROJECT 03</p>
-                                <h4 class="p-title">MEGABOX</h4>
-                                <p class="p-desc">Web Responsive Site Coding</p>
-                                <a href="http://kangsane.dothome.co.kr/mega/index21.html" class="p-link" target="_blank">
-                                    VIEW SITE →
-                                </a>
+                        </div>
+                        <div class="cont_left">
+                            <div class="s3_img"><img src="assets/img/cont3.png" alt="메가박스사이트"></div>
+                            <div class="revealer"></div>
+                            <div class="s3_text">
+                                <p class="s3_tit">PROJECT 03</p>
+                                <h4 class="h4_tit">MEGABOX</h4>
+                                <p class="s3_desc">Web Responsive Site Coding</p>
+                                <span class="mSite">kangsane.dothome.co.kr</span>
+                                <a href="http://kangsane.dothome.co.kr/mega/index21.html" target="_blank" class="skew"><span>VIEW SITE</span></a>
+                            </div>
+                        </div>
+                        <div class="cont_right">
+                            <div class="s3_img"><img src="assets/img/cont4.png" alt="키즈가오사이트"></div>
+                            <div class="revealer"></div>
+                            <div class="s3_text">
+                                <p class="s3_tit">PROJECT 04</p>
+                                <h4 class="h4_tit">KIDSGAO</h4>
+                                <p class="s3_desc">Web Responsive Site Coding</p>
+                                <span class="mSite">kangsane.dothome.co.kr</span>
+                                <a href="http://kangsane.dothome.co.kr/kidsgao/kidsgao.html" target="_blank" class="skew"><span>VIEW SITE</span></a>
+                            </div>
+                        </div>
+                        <div class="cont_left">
+                            <div class="s3_img"><img src="assets/img/cont5.png" alt="가비아사이트"></div>
+                            <div class="revealer"></div>
+                            <div class="s3_text">
+                                <p class="s3_tit">PROJECT 05</p>
+                                <h4 class="h4_tit">GABIA</h4>
+                                <p class="s3_desc">Web Responsive Site Coding</p>
+                                <span class="mSite">kangsane.dothome.co.kr</span>
+                                <a href="http://kangsane.dothome.co.kr/gabia/" target="_blank" class="skew"><span>VIEW SITE</span></a>
+                            </div>
+                        </div>
+                        <div class="cont_right">
+                            <div class="s3_img"><img src="assets/img/cont6.png" alt="락앤락사이트"></div>
+                            <div class="revealer"></div>
+                            <div class="s3_text">
+                                <p class="s3_tit">PROJECT 06</p>
+                                <h4 class="h4_tit">LOCK&amp;LOCK</h4>
+                                <p class="s3_desc">Web Standard Site Coding</p>
+                                <span class="mSite">kangsane.dothome.co.kr</span>
+                                <a href="http://kangsane.dothome.co.kr/locknlock/" target="_blank" class="skew"><span>VIEW SITE</span></a>
+                            </div>
+                        </div>
+                        <div class="cont_left">
+                            <div class="s3_img"><img src="assets/img/cont7.png" alt="모바일사이트"></div>
+                            <div class="revealer"></div>
+                            <div class="s3_text">
+                                <p class="s3_tit">PROJECT 07</p>
+                                <h4 class="h4_tit">MOBILE</h4>
+                                <p class="s3_desc">Web Mobile Site Coding</p>
+                                <span class="mSite">kangsane.dothome.co.kr</span>
+                                <a href="#" class="skew window"><span>VIEW SITE</span></a>
                             </div>
                         </div>
                     </div>
@@ -437,7 +476,6 @@
     <script src="assets/js/easypiechart.min.js"></script>
     <script src="assets/js/TweenMax.min.js"></script>
     <script src="assets/js/custom.js"></script>
-
     <script>
         //윈도우 팝업
         $('.window').click(function(e){
