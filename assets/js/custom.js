@@ -187,48 +187,62 @@ function imagesProgress(){
 $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
     
-    if(wScroll >= $(".sec2 .strapline").offset().top -$(window).height()/1.5){
+    if($(".sec2 .strapline").length && wScroll >= $(".sec2 .strapline").offset().top - $(window).height()/1.5){
         $(".sec2 .strapline").addClass("show");
-    }else {
+    } else {
         $(".sec2 .strapline").removeClass("show");
     }
-    if(wScroll >= $(".sec2 h3").offset().top -$(window).height()/1.5){
+    if($(".sec2 h3").length && wScroll >= $(".sec2 h3").offset().top - $(window).height()/1.5){
         $(".sec2 h3").addClass("show");
-    }else {
+    } else {
         $(".sec2 h3").removeClass("show");
     }
-    if(wScroll >= $(".sec2 .about_photo img").offset().top -$(window).height()/1.5){
+    if($(".sec2 .about_photo img").length && wScroll >= $(".sec2 .about_photo img").offset().top - $(window).height()/1.5){
         $(".sec2 .about_photo img").addClass("show");
-    }else {
+    } else {
         $(".sec2 .about_photo img").removeClass("show");
     }
-    if(wScroll >= $(".sec2 .about_name").offset().top -$(window).height()/1.3){
+    if($(".sec2 .about_name").length && wScroll >= $(".sec2 .about_name").offset().top - $(window).height()/1.3){
         $(".sec2 .about_name").addClass("show");
-    }else {
+    } else {
         $(".sec2 .about_name").removeClass("show");
     }
-    if(wScroll >= $(".sec2 .about_role").offset().top -$(window).height()/1.2){
+    if($(".sec2 .about_role").length && wScroll >= $(".sec2 .about_role").offset().top - $(window).height()/1.2){
         $(".sec2 .about_role").addClass("show");
-    }else {
+    } else {
         $(".sec2 .about_role").removeClass("show");
     }
     
     //section4 animation
-    if(wScroll >= $(".sec4 .strapline").offset().top -$(window).height()/1){
-        $(".sec4 .strapline").addClass("show");
-    }else {
-        $(".sec4 .strapline").removeClass("show");
-    }
-    if(wScroll >= $(".sec4 h3").offset().top -$(window).height()/1){
-        $(".sec4 h3").addClass("show");
-    }else {
-        $(".sec4 h3").removeClass("show");
-    }
-    if(wScroll >= $(".sec4 .ani_wrap").offset().top -$(window).height()/1){
-        $(".sec4 .ani_wrap").addClass("show");
-    }else {
-        $(".sec4 .ani_wrap").removeClass("show");
-    }
+    // if(wScroll >= $(".sec4 .strapline").offset().top -$(window).height()/1){
+    //     $(".sec4 .strapline").addClass("show");
+    // }else {
+    //     $(".sec4 .strapline").removeClass("show");
+    // }
+    // if(wScroll >= $(".sec4 h3").offset().top -$(window).height()/1){
+    //     $(".sec4 h3").addClass("show");
+    // }else {
+    //     $(".sec4 h3").removeClass("show");
+    // }
+    // if(wScroll >= $(".sec4 .ani_wrap").offset().top -$(window).height()/1){
+    //     $(".sec4 .ani_wrap").addClass("show");
+    // }else {
+    //     $(".sec4 .ani_wrap").removeClass("show");
+    // }
+
+    // Section 5 디버깅용 로그 (F12 콘솔에서 확인)
+    // if ($(".contact-grid").length) {
+    //     var targetTop = $(".contact-grid").offset().top;
+    //     var winHeight = $(window).height();
+    //     var triggerPoint = targetTop - winHeight; // 화면 하단이 요소에 닿을 때
+
+    //     console.log("현재 스크롤:", Math.floor(wScroll), " / 작동 포인트:", Math.floor(triggerPoint));
+        
+    //     // 작동 포인트보다 현재 스크롤이 커야 애니메이션이 나옵니다.
+    //     if (wScroll >= triggerPoint) {
+    //         $(".contact-grid").addClass("show");
+    //     }
+    // }
     
     //section5 animation
     if (wScroll >= $(".sec5 .strapline").offset().top - $(window).height()/1) {
@@ -241,14 +255,14 @@ $(window).scroll(function(){
     } else {
         $(".sec5 h3").removeClass("show");
     }
-    if (wScroll >= $(".contact-grid").offset().top - $(window).height()/1) {
+    if ($(".contact-grid").length && wScroll >= $(".contact-grid").offset().top - $(window).height()+200) {
         $(".contact-grid").addClass("show");
-    } else {
+    } else{
         $(".contact-grid").removeClass("show");
     }
-    if (wScroll >= $(".contact-grid").offset().top - $(window).height()/1.4) {
+    if ($(".contact-submit").length && wScroll >= $(".contact-grid").offset().top - $(window).height()+400) {
         $(".contact-submit").addClass("show");
-    } else {
+    } else{
         $(".contact-submit").removeClass("show");
     }
 });
