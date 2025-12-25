@@ -32,26 +32,17 @@ $(window).on("scroll", function () {
 
 
 //스크롤시 메뉴버튼 색변화
-$(window).scroll(function(){
-    var wScroll = $(this).scrollTop();
-    
-    if(wScroll >= cont.eq(0).offset().top){
-        menuBtn.removeClass("show");
-    }
-    if(wScroll >= cont.eq(1).offset().top -600){
-        menuBtn.removeClass("show");
-        menuBtn.eq(0).addClass("show");
-    }
-    if(wScroll >= cont.eq(2).offset().top -600){
-        menuBtn.removeClass("show");
-    }
-    if(wScroll >= cont.eq(3).offset().top -600){
-        menuBtn.removeClass("show");
-        menuBtn.eq(0).addClass("show");
-    }
-    if(wScroll >= cont.eq(4).offset().top -600){
-        menuBtn.removeClass("show");
-    }
+$(window).scroll(function () {
+  var wScroll = $(this).scrollTop();
+  var s3Top = $("#section3").offset().top - 600;
+  var s5Bottom = $("#section5").offset().top + $("#section5").outerHeight();
+
+  menuBtn.removeClass("show");
+
+  // section3 시작 ~ section5 끝 구간이면 show(흰색)
+  if (wScroll >= s3Top && wScroll < s5Bottom) {
+    menuBtn.addClass("show");
+  }
 });
 
 // 메인 버튼 클릭 시
@@ -214,35 +205,35 @@ $(window).scroll(function(){
     }
     
     //section4 animation
-    // if(wScroll >= $(".sec4 .strapline").offset().top -$(window).height()/1){
-    //     $(".sec4 .strapline").addClass("show");
-    // }else {
-    //     $(".sec4 .strapline").removeClass("show");
-    // }
-    // if(wScroll >= $(".sec4 h3").offset().top -$(window).height()/1){
-    //     $(".sec4 h3").addClass("show");
-    // }else {
-    //     $(".sec4 h3").removeClass("show");
-    // }
-    // if(wScroll >= $(".sec4 .ani_wrap").offset().top -$(window).height()/1){
-    //     $(".sec4 .ani_wrap").addClass("show");
-    // }else {
-    //     $(".sec4 .ani_wrap").removeClass("show");
-    // }
+    if(wScroll >= $(".sec4 .strapline").offset().top -$(window).height()/1){
+        $(".sec4 .strapline").addClass("show");
+    }else {
+        $(".sec4 .strapline").removeClass("show");
+    }
+    if(wScroll >= $(".sec4 h3").offset().top -$(window).height()/1){
+        $(".sec4 h3").addClass("show");
+    }else {
+        $(".sec4 h3").removeClass("show");
+    }
+    if(wScroll >= $(".sec4 .ani_wrap").offset().top -$(window).height()/1){
+        $(".sec4 .ani_wrap").addClass("show");
+    }else {
+        $(".sec4 .ani_wrap").removeClass("show");
+    }
 
     // Section 5 디버깅용 로그 (F12 콘솔에서 확인)
-    // if ($(".contact-grid").length) {
-    //     var targetTop = $(".contact-grid").offset().top;
-    //     var winHeight = $(window).height();
-    //     var triggerPoint = targetTop - winHeight; // 화면 하단이 요소에 닿을 때
+    if ($(".contact-grid").length) {
+        var targetTop = $(".contact-grid").offset().top;
+        var winHeight = $(window).height();
+        var triggerPoint = targetTop - winHeight; // 화면 하단이 요소에 닿을 때
 
-    //     console.log("현재 스크롤:", Math.floor(wScroll), " / 작동 포인트:", Math.floor(triggerPoint));
+        console.log("현재 스크롤:", Math.floor(wScroll), " / 작동 포인트:", Math.floor(triggerPoint));
         
-    //     // 작동 포인트보다 현재 스크롤이 커야 애니메이션이 나옵니다.
-    //     if (wScroll >= triggerPoint) {
-    //         $(".contact-grid").addClass("show");
-    //     }
-    // }
+        // 작동 포인트보다 현재 스크롤이 커야 애니메이션이 나옵니다.
+        if (wScroll >= triggerPoint) {
+            $(".contact-grid").addClass("show");
+        }
+    }
     
     //section5 animation
     if (wScroll >= $(".sec5 .strapline").offset().top - $(window).height()/1) {
@@ -319,18 +310,12 @@ for (let i = 0; i < totalStars; i++) {
 }
 
 
-/* ===========================
-   INTRO ANIMATION (jQuery)
-=========================== */
-
+// INTRO ANIMATION (jQuery)
 $(function(){
-
-    // 1. 배경 채우기
     $(".intro-bg").animate({
         height: "100%"
     }, 1000, "easeOutQuad", function(){
 
-        // 2. 프로필 등장 (탄성 효과)
         $(".intro-profile")
             .delay(200)
             .animate({ 
@@ -364,10 +349,10 @@ $(function(){
 
     });
 
-    // 4. 버튼 클릭 시 인트로 제거 → 메인 진입
+    // 버튼 클릭 시 인트로 제거 → 메인 진입
     $(".intro-btn").click(function(){
         $("#intro").fadeOut(600);
-        $("body").addClass("active"); // 기존 애니메이션 자연스럽게 실행
+        $("body").addClass("active");
     });
 
 });
